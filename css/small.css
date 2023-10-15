@@ -21,6 +21,7 @@ header div {
 main{
     display: flex;
     flex-flow: column wrap; 
+    gap: 15px;
     justify-content: center;
     background-color:#FFFFF2;
     padding:1rem;
@@ -32,7 +33,7 @@ form {
     gap:1rem;
 }
 
-form input{padding: .5rem; min-width:300px;}
+form input[type="search"]{padding: .5rem; min-width:300px;}
 
 .btn{margin:auto; padding: .5rem; min-width:10rem;}
 
@@ -43,9 +44,16 @@ main img{
     padding:1rem;
 }
 
-div{
-    border: #570000 ridge 1px;
+.recipes{
+    display:flex; 
+    flex-direction: column; 
+    gap: 10px; 
+    border: #570000 dashed 5px; 
+    padding: 10px; 
+    margin-bottom: 10px;
 }
+
+.recipes p:nth-child(2), .recipes p:nth-child(4){font-weight: bold;}
 
 footer {
     background-color: #280000; 
