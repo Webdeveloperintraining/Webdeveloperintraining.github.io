@@ -1,0 +1,56 @@
+*{margin: 0; padding: 0;}
+
+h1,h2,h3,h4{font-family: 'Young Serif', serif;}
+
+p,a,li{font-family: 'Open Sans', sans-serif;}
+
+header{background-color: #570000; color: #FFFFF2;}
+
+header div {
+    display: flex; 
+    flex-flow: column wrap; 
+    align-items: center;
+    align-items: center;
+    justify-items: center;
+    align-content: center;
+    justify-content: center; 
+    padding:1rem;
+    text-align: center;
+}
+
+main{
+    display: flex;
+    flex-flow: column wrap; 
+    justify-content: center;
+    background-color:#FFFFF2;
+    padding:1rem;
+}
+
+form {
+    display: flex;
+    flex-flow: column nowrap;   
+    gap:1rem;
+}
+
+form input{padding: .5rem; min-width:300px;}
+
+.btn{margin:auto; padding: .5rem; min-width:10rem;}
+
+main img{
+    display: block;
+    margin: auto;
+    max-width: 70%;
+    padding:1rem;
+}
+
+div{
+    border: #570000 ridge 1px;
+}
+
+footer {
+    background-color: #280000; 
+    color:#FFFFF2; 
+    text-align: center;
+    padding:2rem;
+}
+
