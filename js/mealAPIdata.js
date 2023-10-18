@@ -5,14 +5,13 @@ async function randomMealsData() {
   }
   let data = await response.json();
   let meal = data.meals[0];
-  //console.log(meal);
-  displayrandomRecipe(meal);
+  displayRandomRecipe(meal);
 }
 randomMealsData()
 randomMealsData()
 randomMealsData()
 
-function displayrandomRecipe(data){
+function displayRandomRecipe(data){
   let randomSection = document.querySelector('#random-recipes');
 
   let ingredients = [];
@@ -39,22 +38,44 @@ function displayrandomRecipe(data){
 }
 
 /*
-function findRandomRecipeIngredient(data){
-  let ingredientSection = document.getElementById('ingredient-recipe');
+const search = document.getElementById('searchMeal');
+
+
+const recipeTemplate = document.querySelector('[ingredient-recipe]');
+async function randomIngredientMealData() {
+  //const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=${}`);
+  const response = await fetch(`https://www.themealdb.com/api/json/v1/1/filter.php?i=C`);
+  if (!response.ok) {
+    throw new Error('Network response was not ok');
+  }
+  let data = await response.json();
+  let meal = data.meals;
+
+  const title= recipeTemplate.content.children[0];
   
+  if (meal === null) {
+    title.innerHTML = "Sorry :C, I didn't find a recipe with that ingredient"
+    recipeTemplate.append(title);
+  }
+}
+  console.log(meal);
+
   
-}*/
+  title.textContent = `Here's a recipe that includes ${} :`;
+  data.strMeal
+  let header = ; 
+  let =
+  let =
 
-//const searchBtn = document.querySelector('.btn');
+randomIngredientMealData();
 
-//searchBtn.addEventListener("click")
-//searchBtn.addEventListener("keyup")
+search.addEventListener("click",randomIngredientMealData())
+search.addEventListener("keyup",randomIngredientMealData())
 
+const urlIngredients ='https://www.themealdb.com/api/json/v1/1/list.php?i=list';
 
-//const urlIngredients ='https://www.themealdb.com/api/json/v1/1/list.php?i=list';
+const urlRandomMeals='https://www.themealdb.com/api/json/v1/1/random.php';
 
-//const urlRandomMeals='https://www.themealdb.com/api/json/v1/1/random.php';
-
-
-// Meals by ingredient = https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
-// Meal by name https://www.themealdb.com/api/json/v1/1/search.php?s=Chick-Fil-A%20Sandwich
+ Meals by ingredient = https://www.themealdb.com/api/json/v1/1/filter.php?i=chicken_breast
+Meal by name https://www.themealdb.com/api/json/v1/1/search.php?s=Chick-Fil-A%20Sandwich
+*/
