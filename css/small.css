@@ -18,10 +18,16 @@ header div {
     text-align: center;
 }
 
+header div img{    
+    display: block;
+    margin: auto;
+    max-width: 70%;
+}
+
 main{
     display: flex;
     flex-flow: column wrap; 
-    gap: 15px;
+    gap: 18px;
     justify-content: center;
     background-color:#FFFFF2;
     padding:1rem;
@@ -30,12 +36,36 @@ main{
 form {
     display: flex;
     flex-flow: column nowrap;   
-    gap:1rem;
+    gap:1.5rem;
 }
 
-form input[type="search"]{padding: .5rem; min-width:300px;}
+form input[type="search"]{
+    margin: auto;
+    padding: .7rem; 
+    text-align: center;
+    width:85%;
+    max-width:350px;
+    background-color:rgb(255, 252, 210); 
+    border: 3px dashed #570000; 
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+}
 
-.btn{margin:auto; padding: .5rem; min-width:10rem;}
+.sbtn{
+    display: block;
+    margin:auto; 
+    padding: 1rem; 
+    min-width:10rem;
+    border-width: 1px;
+    background-color: #280000;
+    transition: background-color 1s;
+    font-family: 'Young Serif', serif;
+    color: #FFFFF2;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.btn:hover{background-color: #570000;}
 
 main img{
     display: block;
@@ -48,12 +78,24 @@ main img{
     display:flex; 
     flex-direction: column; 
     gap: 10px; 
-    border: #570000 dashed 5px; 
+    border:4px dashed #570000; 
     padding: 10px; 
     margin-bottom: 10px;
 }
 
-.recipes p:nth-child(2), .recipes p:nth-child(4){font-weight: bold;}
+.recipes ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+    list-style-type:disc;   
+}
+
+.recipes p {white-space: pre-wrap;}
+
+.recipes p:nth-child(3), .recipes p:nth-child(5){font-weight: bold;}
 
 footer {
     background-color: #280000; 
@@ -61,4 +103,3 @@ footer {
     text-align: center;
     padding:2rem;
 }
-
