@@ -2,21 +2,26 @@
     
     /* header div img{max-width: 80%;} */
 
-    div.search-area input[type="search"]{ max-width:650px; }
+    div.search-area input[type="search"]{ max-width:650px;}
 
-    main{padding:3rem; gap:3rem;}
+    div.search-area{ gap: 2.5rem;}
 
-    #random-recipes{gap: 3rem;}
+    .btn-grid{ gap: 2.5rem; }
+
+    main{padding:3rem; gap:2.5rem;}
+
+    #random-recipes{gap: 2.5rem;}
 
     header div img{    
         width: 70%;
         min-width: 150px;
     }
 
-    .recipes{
-        padding: 3rem; }
+    .recipes{padding: 3rem; }
+    
+    .bookmark{  right: 2rem; max-width: 3.5rem;}
 
-    .recipes img{
+    .recipes img:nth-child(3){
         width: 60%;
         min-width: 150px;
         max-width: 400px;

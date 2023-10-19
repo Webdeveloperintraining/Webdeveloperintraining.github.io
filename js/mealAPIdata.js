@@ -25,6 +25,7 @@ function displayRandomRecipe(data){
     }
   }
   let appendData = `<div class="recipes">
+                      <img class="bookmark" src="images/bookmark_plus_icon.png">
                       <h3>${data.strMeal}</h3>
                       <img src="${data.strMealThumb}" alt="${data.strMeal}">
                       <p>Ingredients:</p>

@@ -3,6 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Irvin Silva">
+    <meta name="description" content="A page that will get you a random recipe by inserting a recipe">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Young+Serif&display=swap" rel="stylesheet">
@@ -15,12 +17,15 @@
 <body>
     <header>
         <div>
-            <picture>
-                <source media="(min-width:480px)" srcset="images/pan_medium.png">
-                <img src="images/pan_small.png" alt="Cookbook logo">
-            </picture>
-            <h1>Ingredient Cookbook</h1>
+            <a class="logo" href="index.html">
+                <picture>
+                    <source media="(min-width:480px)" srcset="images/pan_medium.png">
+                    <img class="logo" src="images/pan_small.png" alt="Cookbook logo">
+                </picture>
+            <h1 class="logo-text noDecoration">Ingredient Cookbook</h1>
+            </a>
         </div>
+        <!-- <ul><li><a href="savedRecipes.html">Saved Recipes</a></li></ul> -->
         <!-- <p class=""><a href="savedRecipes.html">Saved Recipes</a></p> -->
     </header>
     <main>
@@ -28,12 +33,16 @@
         
         <div class="search-area">
             <input type="search" for="searchMeal" name="searchMeal" id="searchMeal" placeholder="Example: chicken breast">
-            <button type="submit" class="sbtn"> Search Meal</button>
+            <div class="btn-grid">
+                <button type="submit" class="sbtn"> Search Meal</button>
+                <p class="saved-recipes noDecoration"><a href="savedRecipes.html">Saved Recipes</a></p>
+            </div>
         </div>
-
+        
         <template ingredient-recipe>
-            <h2></h2>
             <div class="recipes" >
+                <img class="bookmark" src="images/bookmark_plus_icon.png">
+                <h3></h3>
                 <img src="" alt="">
                 <p>Ingredients:</p>
                 <p></p>

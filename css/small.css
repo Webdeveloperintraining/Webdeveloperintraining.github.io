@@ -18,11 +18,18 @@ header div {
     text-align: center;
 }
 
-header div img{    
+.logo{    
     display: block;
     margin: auto;
     width: 70%;
+    max-width:200px;
     min-width: 150px;
+}
+
+h1.logo-text {color: #FFFFF2;}
+
+.noDecoration, a:link, a:visited {
+    text-decoration: none;
 }
 
 main{
@@ -54,12 +61,20 @@ div.search-area input[type="search"]{
     font-size: 16px;
 }
 
-.sbtn{
-    display: block;
-    margin:auto; 
+.btn-grid{
+    display: flex; 
+    align-items: center; 
+    justify-content: center;
+    gap: 1rem;
+    }
+
+.sbtn, p.saved-recipes a, .returnHome a {
+    /* display: block;
+    margin:auto;  */
     padding: 1rem; 
     min-width:10rem;
     border-width: 1px;
+    border-style: solid 1px black;
     background-color: #280000;
     transition: background-color 1s;
     font-family: 'Young Serif', serif;
@@ -67,12 +82,19 @@ div.search-area input[type="search"]{
     cursor: pointer;
     font-size: 16px;
     box-shadow: 5px 8px 10px black; 
-    margin-bottom: 1rem;
+    /* margin-bottom: 1rem; */
 }
 
-.sbtn:hover{background-color: #570000;}
+.returnHome a {
+    display: block;
+    width: 12rem;
+    margin: auto;
+    text-align: center; 
+} 
 
-.recipes img{
+.sbtn:hover, p.saved-recipes a:hover , .returnHome a:hover {background-color: #570000;}
+
+.recipes img:nth-child(3){
     display: block;
     margin: auto;
     width: 70%;
@@ -95,9 +117,18 @@ div.search-area input[type="search"]{
     padding: 1rem; 
     font-size: 1.1rem;
     background-color:rgb(255, 252, 210); 
+    position: relative;
 }
 
 .recipes h3{color: #570000;}
+
+.bookmark{
+    right: 1.5rem;
+    position: absolute;
+    max-width: 3rem;
+    cursor: pointer;
+    top:3rem;
+}
 
 .recipes ul {
     display: grid;
