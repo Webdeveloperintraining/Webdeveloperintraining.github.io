@@ -2,7 +2,7 @@
     
     /* header div img{max-width: 80%;} */
 
-    div.search-area input[type="search"]{ max-width:650px;}
+    div.search-area input { max-width:650px;}
 
     div.search-area{ gap: 2.5rem;}
 
@@ -17,9 +17,13 @@
         min-width: 150px;
     }
 
+    .sbtn,p.saved-recipes a, .returnHome a {padding: 1.2rem;}
+
+    #ingredient-recipe h2,h3{ margin:3rem;}
+
     .recipes{padding: 3rem; }
     
-    .bookmark{  right: 2rem; max-width: 3.5rem;}
+    .bookmark{  right: 2rem; top:5rem; max-width: 3rem;}
 
     .recipes img:nth-child(3){
         width: 60%;
