@@ -1,4 +1,4 @@
-const ingredient = document.getElementById('ingredient');
+let ingredient = document.getElementById('ingredient');
 const searchButton = document.querySelector('.sbtn');
 const ingredientRecipeSection = document.getElementById('ingredient-recipe');
 
@@ -9,12 +9,12 @@ async function getRandomIngredientMeal() {
   }
   let data = await response.json();
   let meal = data.meals;
-  if(meal !== null){
-    ingredientRecipeSection.innerHTML = "";
+  if(meal !== null && ingredient.value !== ''){
+    ingredientRecipeSection.innerHTML = '';
     let randomNumber = getRandomNumber(0, meal.length);
     getRecipeData(meal[randomNumber].strMeal);
-  }if(meal === null){
-    let message = "<h3>Sorry, We don't have recipes with that ingredient. </h3>";
+  }if(meal === null || ingredient.value === ''){
+    let message = "<h3>Sorry, I didn't find any recipe with that ingredient. </h3>";
     ingredientRecipeSection.innerHTML = message;
   }
 }
@@ -45,7 +45,7 @@ function displayRecipe(meal){
       break;
     }
   }
-  let appendData = `<h2>Recipe that includes ${ingredient.value}</h2>
+  let appendData = `<h2>Recipe including ${ingredient.value}</h2>
   <div class="recipes">
   <img class="bookmark" src="images/bookmark_plus_icon.png" loading="lazy">
   <h3>${meal.strMeal}</h3>
