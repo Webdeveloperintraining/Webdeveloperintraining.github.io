@@ -23,7 +23,7 @@
 
     .recipes{padding: 3rem; }
 
-    .recipes img:nth-child(2){
+    .recipes img:nth-child(2), #saveRecipes img:nth-child(3){
         width: 60%;
         min-width: 150px;
         max-width: 400px;

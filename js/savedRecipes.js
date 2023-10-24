@@ -1,6 +1,5 @@
 function getRecipes(){
-  if (arrayIsEmpty((JSON.parse(localStorage.getItem('savedRecipes'))))){
-    document.querySelector('#saveRecipes h2').remove();
+  if (JSON.parse(localStorage.getItem('savedRecipes'))){
     JSON.parse(localStorage.getItem('savedRecipes')).forEach ( async element => {
         let recipe = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${element}`);
         if (!recipe.ok) {
@@ -10,12 +9,16 @@ function getRecipes(){
         let meal = data.meals[0];
         savedRecipesDisplay(meal)
     });
-  }}
+  }
+  
+}
 getRecipes()
 
 const saveMealSection = document.getElementById('saveRecipes');
 
 function savedRecipesDisplay(meal){
+//!document.getElementById('nsaved').remove()
+if (!document.getElementById('nsaved')){
 let ingredients = [];
   for (let i = 1; i <= 20; i++) {
     if (meal["strIngredient" + i]) {
@@ -27,7 +30,7 @@ let ingredients = [];
     }
   }
 
-let appendData = `<div class="recipes">
+let appendData = `<div class="recipes saved">
   <span class='deleteBtn' onclick="removeRecipe('${meal.strMeal}')">&#10006;</span>
   <h3>${meal.strMeal}</h3>
   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" loading="lazy">
@@ -40,6 +43,7 @@ let appendData = `<div class="recipes">
   </div>`;
 
 saveMealSection.innerHTML += appendData;
+}
 }
 
 function removeRecipe(meal){

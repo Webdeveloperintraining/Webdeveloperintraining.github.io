@@ -121,7 +121,7 @@ button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
 
 .sbtn:hover, p.saved-recipes a:hover , .returnHome a:hover , .clear:hover{background-color: #570000;}
 
-.recipes img:nth-child(2){
+.recipes img:nth-child(2), #saveRecipes img:nth-child(3){
     display: block;
     margin: auto;
     width: 70%;
@@ -170,7 +170,9 @@ li:before { content:"•"; font-size:20px; vertical-align:top; padding-right:7px
     white-space-collapse: preserve-spaces;
 }
 
-.recipes p:nth-child(3), .recipes p:nth-child(5){font-weight: bold; text-align: center; color:#570000;;}
+.recipes p:nth-child(3), .recipes p:nth-child(5){font-weight: bold; text-align: center; color:#570000;}
+
+#saveRecipes .recipes p:nth-child(4), #saveRecipes .recipes p:nth-child(6){font-weight: bold; text-align: center; color:#570000;}
 
 footer {
     background-color: #280000; 
@@ -191,4 +193,4 @@ footer {
 
 #saveRecipes .recipes{animation-name:slide; animation-duration: 2s;}
 
-#saveRecipes h2 { padding: 9rem;} 
+main h2#nsaved{ padding: 9rem;} 
