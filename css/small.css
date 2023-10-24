@@ -121,7 +121,7 @@ button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
 
 .sbtn:hover, p.saved-recipes a:hover , .returnHome a:hover , .clear:hover{background-color: #570000;}
 
-.recipes img:nth-child(3){
+.recipes img:nth-child(2){
     display: block;
     margin: auto;
     width: 70%;
@@ -152,17 +152,6 @@ button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
 
 .recipes h3{color: #570000;}
 
-.bookmark{
-    display: none;
-    right: .5rem;
-    position: absolute;
-    max-width: 3rem;
-    cursor: pointer;
-    top:5.5rem;
-}
-
-/*.bookmark:hover{filter: invert(75%);}*/
-
 .recipes ul {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -181,7 +170,7 @@ li:before { content:"•"; font-size:20px; vertical-align:top; padding-right:7px
     white-space-collapse: preserve-spaces;
 }
 
-.recipes p:nth-child(4), .recipes p:nth-child(6){font-weight: bold; text-align: center; color:#570000;;}
+.recipes p:nth-child(3), .recipes p:nth-child(5){font-weight: bold; text-align: center; color:#570000;;}
 
 footer {
     background-color: #280000; 

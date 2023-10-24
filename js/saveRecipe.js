@@ -5,14 +5,10 @@ function getMeal(mealName){
     savedRecipes.push(mealName);
     localStorage.savedRecipes = JSON.stringify(savedRecipes);
     savedRecipes = JSON.parse(localStorage.savedRecipes);
-    const bookmark = document.getElementsByClassName('box')
-    bookmark.forEach(element => {
-      
-    });
-    //console.log(savedRecipes)
+    alert(`The ${mealName} recipe was added to the saved recipes section.`);
   }
   else{
-    alert('This recipe is already in the saved recipes section');
+    alert('This recipe is already in the saved recipes section.');
   }
 }
 

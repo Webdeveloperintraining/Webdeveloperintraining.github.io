@@ -22,10 +22,8 @@
     #ingredient-recipe h2,h3{ margin:3rem;}
 
     .recipes{padding: 3rem; }
-    
-    .bookmark{  right: 2rem; top:5rem; max-width: 3rem;}
 
-    .recipes img:nth-child(3){
+    .recipes img:nth-child(2){
         width: 60%;
         min-width: 150px;
         max-width: 400px;

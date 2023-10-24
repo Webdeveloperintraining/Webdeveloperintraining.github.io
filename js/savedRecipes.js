@@ -1,5 +1,6 @@
 function getRecipes(){
-  if (JSON.parse(localStorage.getItem('savedRecipes'))){
+  if (arrayIsEmpty((JSON.parse(localStorage.getItem('savedRecipes'))))){
+    document.querySelector('#saveRecipes h2').remove();
     JSON.parse(localStorage.getItem('savedRecipes')).forEach ( async element => {
         let recipe = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${element}`);
         if (!recipe.ok) {
@@ -8,7 +9,6 @@ function getRecipes(){
         let data = await recipe.json();
         let meal = data.meals[0];
         savedRecipesDisplay(meal)
-        
     });
   }}
 getRecipes()
@@ -16,7 +16,6 @@ getRecipes()
 const saveMealSection = document.getElementById('saveRecipes');
 
 function savedRecipesDisplay(meal){
-  document.querySelector('#saveRecipes h2').remove();
 let ingredients = [];
   for (let i = 1; i <= 20; i++) {
     if (meal["strIngredient" + i]) {
@@ -54,7 +53,20 @@ function removeRecipe(meal){
 
 const removeAll= document.querySelector('.clear');
 
-removeAll.addEventListener('click',() => {
-  
-  
-  let warning = confirm("WARNING \n Are you sure to remove all recipes?"); if (warning){ localStorage.clear(); location.reload();}})
+removeAll.addEventListener('click',() => {let warning = confirm("WARNING \n Are you sure to remove all recipes?"); if (warning){ localStorage.clear(); location.reload();}})
+
+//To check if an array is empty using javascript 
+function arrayIsEmpty(array) {
+  //If it's not an array, return FALSE.
+  if (!Array.isArray(array)) {
+      return false;
+  }
+  //If it is an array, check its length property
+  if (array.length == 0) {
+      //Return TRUE if the array is empty
+      return true;
+  }
+  //Otherwise, return FALSE.
+  return false;
+  // reference: https://flexiple.com/javascript/check-if-array-empty-javascript
+}
