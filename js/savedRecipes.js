@@ -1,5 +1,6 @@
 function getRecipes(){
   if (JSON.parse(localStorage.getItem('savedRecipes'))){
+    document.getElementById('nsaved').remove()
     JSON.parse(localStorage.getItem('savedRecipes')).forEach ( async element => {
         let recipe = await fetch(`https://www.themealdb.com/api/json/v1/1/search.php?s=${element}`);
         if (!recipe.ok) {
@@ -8,17 +9,14 @@ function getRecipes(){
         let data = await recipe.json();
         let meal = data.meals[0];
         savedRecipesDisplay(meal)
-    });
-  }
-  
-}
+    });  
+}}
 getRecipes()
 
 const saveMealSection = document.getElementById('saveRecipes');
 
 function savedRecipesDisplay(meal){
-//!document.getElementById('nsaved').remove()
-if (!document.getElementById('nsaved')){
+
 let ingredients = [];
   for (let i = 1; i <= 20; i++) {
     if (meal["strIngredient" + i]) {
@@ -44,7 +42,7 @@ let appendData = `<div class="recipes saved">
 
 saveMealSection.innerHTML += appendData;
 }
-}
+
 
 function removeRecipe(meal){
   let recipes = JSON.parse(localStorage.getItem('savedRecipes'));
