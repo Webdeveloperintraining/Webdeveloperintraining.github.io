@@ -10,7 +10,7 @@
 
     main{padding:3rem; gap:2.5rem;}
 
-    #random-recipes{gap: 2.5rem;}
+    #random-recipes, #saved-recipes{gap: 2.5rem;}
 
     header div img{    
         width: 70%;
@@ -43,6 +43,16 @@
         display:inline-block; 
         text-align: center; 
         width: 50%;
+    }
+
+    .clear{ margin:auto; max-width:15rem; font-size: larger; font-weight: 700; padding: 1.5rem;}
+
+    .deleteBtn{
+        position: absolute; 
+        right:20px; 
+        top:10px; 
+        font-size:50px;
+        cursor: pointer ;
     }
 
 }

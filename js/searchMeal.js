@@ -56,7 +56,7 @@ function displayRecipe(meal){
   </ul>
   <p>Preparation:</p>
   <p>${meal.strInstructions}</p>
-  <button type="button" class="sbtn toogle" onclick="getMeal(${meal.strMeal})"> Save Meal</button>
+  <button type="button" class="sbtn toogle" onclick="getMeal('${meal.strMeal}')"> Save Meal</button>
   </div>`
   ingredientRecipeSection.innerHTML += appendData;
 }
