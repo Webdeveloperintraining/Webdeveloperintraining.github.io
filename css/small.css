@@ -79,7 +79,7 @@ div.search-area input{
 
     #ingredient-recipe h2,h3{ margin:1rem;}
 
-    .sbtn,p.saved-recipes a, .returnHome a {
+    .sbtn, p.saved-recipes a, .returnHome a {
     /* display: block;
     margin:auto;  */
     padding: .9rem; 
@@ -95,6 +95,8 @@ div.search-area input{
     box-shadow: 5px 8px 10px black;  
     /* margin-bottom: 1rem; */
 }
+
+button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
 
 .returnHome a {
     display: block;
@@ -136,6 +138,7 @@ div.search-area input{
 .recipes h3{color: #570000;}
 
 .bookmark{
+    display: none;
     right: .5rem;
     position: absolute;
     max-width: 3rem;
@@ -143,7 +146,7 @@ div.search-area input{
     top:5.5rem;
 }
 
-.bookmark:hover{filter: invert(75%);}
+/*.bookmark:hover{filter: invert(75%);}*/
 
 .recipes ul {
     display: grid;

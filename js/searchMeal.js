@@ -47,7 +47,7 @@ function displayRecipe(meal){
   }
   let appendData = `<h2>Recipe including ${ingredient.value}</h2>
   <div class="recipes">
-  <img class="bookmark" src="images/bookmark_plus_icon.png" loading="lazy">
+  <img class="bookmark" src="images/bookmark_icon.png" loading="lazy">
   <h3>${meal.strMeal}</h3>
   <img src="${meal.strMealThumb}" alt="${meal.strMeal}" loading="lazy">
   <p>Ingredients:</p>
@@ -56,6 +56,7 @@ function displayRecipe(meal){
   </ul>
   <p>Preparation:</p>
   <p>${meal.strInstructions}</p>
+  <button type="button" class="sbtn toogle" onclick="getMeal(${meal.strMeal})"> Save Meal</button>
   </div>`
   ingredientRecipeSection.innerHTML += appendData;
 }

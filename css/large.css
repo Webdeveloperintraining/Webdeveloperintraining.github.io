@@ -1,17 +1,30 @@
 @media only screen and (min-width: 850px)  {
 
-    main{gap:1.5rem;}
+    /* main{gap:2rem;} */
 
-    #random-recipes{gap: 0rem;}
+    /* #random-recipes{gap: 1.5rem;} */
 
-    .recipes{ 
-        display: block; 
+    div.recipes{ 
+        /* display: flex; 
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         margin: auto; 
+        margin-top: 0rem;
+        margin-top: 0rem;
+        gap: 1rem;
         width:60%; 
-        max-width:60vw; 
+        max-width:60rem; 
+        padding: 3rem; */
+        margin: auto; 
+        margin-top: 0rem;
+        margin-top: 0rem;
+        max-width:60rem; 
      }
 
     .recipes p:nth-child(7){text-align: center; }
+
+    button.sbtn.toogle{display: block; margin: auto;}
 
 
 }

@@ -25,7 +25,7 @@ function displayRandomRecipe(data){
     }
   }
   let appendData = `<div class="recipes">
-                      <img class="bookmark" src="images/bookmark_plus_icon.png" loading="lazy">
+                      <img class="bookmark" src="images/bookmark_icon.png" loading="lazy">
                       <h3>${data.strMeal}</h3>
                       <img src="${data.strMealThumb}" alt="${data.strMeal}" loading="lazy">
                       <p>Ingredients:</p>
@@ -34,6 +34,7 @@ function displayRandomRecipe(data){
                       </ul>
                       <p>Preparation:</p>
                       <p>${data.strInstructions}</p>
+                      <button type="button" class="sbtn toogle" onclick="getMeal('${data.strMeal}')"> Save Meal</button>
                     </div>`
   randomSection.innerHTML += appendData;
 }
