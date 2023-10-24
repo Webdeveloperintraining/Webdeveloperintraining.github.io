@@ -13,10 +13,10 @@ function getRecipes(){
   }}
 getRecipes()
 
-const saveMealSection = document.getElementById('saved-recipes');
+const saveMealSection = document.getElementById('saveRecipes');
 
 function savedRecipesDisplay(meal){
-  document.querySelector('#saved-recipes h2').remove();
+  document.querySelector('#saveRecipes h2').remove();
 let ingredients = [];
   for (let i = 1; i <= 20; i++) {
     if (meal["strIngredient" + i]) {

@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="css/small.css">
     <link rel="stylesheet" href="css/medium.css">
     <link rel="stylesheet" href="css/large.css">
+    <script src="js/randomMeal.js" async></script>
     <title> Find Recipe From Ingredient CookBook</title>
 </head>
 <body>
@@ -32,7 +33,7 @@
         <h2>Type an ingredient to find a random recipe </h2>
         
         <div class="search-area">
-            <input type="text" id="ingredient" placeholder="Example: chicken breast">
+            <input type="text" id="ingredient" placeholder="Example:chicken breast">
             <div class="btn-grid">
                 <button type="button" class="sbtn"> Search Meal</button>
                 <p class="saved-recipes noDecoration"><a href="savedRecipes.html">Saved Recipes</a></p>
@@ -41,15 +42,14 @@
 
         <div id="ingredient-recipe"> </div>
 
-        <h2>Random Recipes</h2>
+        <h2 class="recipesTitle">Random Recipes</h2>
         <div id="random-recipes"> </div> 
     </main>
     <footer>
         <strong> </span> &#169;<span id="date"></span> Irvin Silva  WDD330 BYU-I</strong>
     </footer>
 </body>
-<script src="js/randomMeal.js"></script>
+<script src="js/date.js"></script>
 <script src="js/searchMeal.js"></script>
 <script src="js/saveRecipe.js"></script>
-<script src="js/date.js"></script>
 </html>

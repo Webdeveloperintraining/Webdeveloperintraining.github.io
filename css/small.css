@@ -1,8 +1,23 @@
 *{margin: 0; padding: 0;}
 
-/*@keyframes display-recipes {
+@keyframes display-text {
+    from {
+        opacity: 0;
+      }
+    
+      to {
+        opacity: 1;
+      }
+  }
 
-  }*/
+@keyframes slide {
+    from {
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(0%);
+    }
+}
 
 h1,h2,h3,h4{font-family: 'Young Serif', serif;}
 
@@ -43,7 +58,9 @@ main{
     padding:1rem;
 }
 
-main h2,h3 {text-align:center;}
+main h2,h3 {text-align:center; }
+
+.recipesTitle{animation-name:display-text; animation-duration: 2s;}
 
 .search-area{
     display: flex;
@@ -70,11 +87,6 @@ div.search-area input{
     justify-content: center;
     gap: 1rem;
     /* margin: 1rem; */
-    }
-
-    #ingredient-recipe {
-    animation-name: display-recipes;
-    animation-duration: 10s;
     }
 
     #ingredient-recipe h2,h3{ margin:1rem;}
@@ -118,11 +130,13 @@ button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
     padding:1rem;
 }
 
-#random-recipes, #saved-recipes{
+#random-recipes, #saveRecipes{
     display:flex;
     flex-direction: column;
     gap: 1rem;
 }
+
+#random-recipes {animation-name:slide; animation-duration: 2s;}
 
 .recipes{
     display:flex; 
@@ -134,7 +148,6 @@ button.sbtn.toogle{text-align: center; width: 12rem; margin: auto;}
     font-size: 1.1rem;
     background-color:rgb(255, 252, 210); 
     position: relative;
-
 }
 
 .recipes h3{color: #570000;}
@@ -186,5 +199,7 @@ footer {
     color: red; font-size:40px;
     cursor: pointer ;
 }
- 
-#saved-recipes h2 { padding: 8rem;} 
+
+#saveRecipes .recipes{animation-name:slide; animation-duration: 2s;}
+
+#saveRecipes h2 { padding: 9rem;} 

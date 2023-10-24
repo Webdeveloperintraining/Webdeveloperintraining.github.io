@@ -45,7 +45,7 @@ function displayRecipe(meal){
       break;
     }
   }
-  let appendData = `<h2>Recipe including ${ingredient.value}</h2>
+  let appendData = `<h2 class="recipesTitle">Recipe including ${ingredient.value}</h2>
   <div class="recipes">
   <img class="bookmark" src="images/bookmark_icon.png" loading="lazy">
   <h3>${meal.strMeal}</h3>
