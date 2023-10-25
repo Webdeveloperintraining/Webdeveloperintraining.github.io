@@ -44,12 +44,17 @@ saveMealSection.innerHTML += appendData;
 }
 
 
-function removeRecipe(meal){
-  let recipes = JSON.parse(localStorage.getItem('savedRecipes'));
-  //console.log(recipes);
+function removeRecipe(mealRemoved){
+  /*let recipes = JSON.parse(localStorage.getItem('savedRecipes'));
   let index = recipes.indexOf(meal);
   recipes.splice(index,1);
   localStorage.setItem('savedRecipes', JSON.stringify(recipes));
+  location.reload();*/
+  let savedRecipes = JSON.parse(localStorage.getItem('savedRecipes'));
+  savedRecipes= savedRecipes.filter(meal => meal !== mealRemoved)
+  localStorage.savedRecipes = JSON.stringify(savedRecipes);
+  savedRecipes = JSON.parse(localStorage.savedRecipes);
+  //console.log(recipes)
   location.reload();
 }
 
@@ -57,6 +62,7 @@ const removeAll= document.querySelector('.clear');
 
 removeAll.addEventListener('click',() => {let warning = confirm("WARNING \n Are you sure to remove all recipes?"); if (warning){ localStorage.clear(); location.reload();}})
 
+/*
 //To check if an array is empty using javascript 
 function arrayIsEmpty(array) {
   //If it's not an array, return FALSE.
@@ -72,3 +78,4 @@ function arrayIsEmpty(array) {
   return false;
   // reference: https://flexiple.com/javascript/check-if-array-empty-javascript
 }
+*/
